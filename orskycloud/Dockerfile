@@ -49,6 +49,6 @@ RUN echo "==> Install dependencies..." \
     && rm -rf /root/ngx_openresty
 
 EXPOSE 80 
-CMD ["nginx", "-p", "/opt/openresty/nginx"]
+CMD ["nginx", "-p", "/opt/openresty/nginx", "-g", "daemon off;"]
 
 
