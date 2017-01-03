@@ -1,0 +1,2 @@
+2017/01/03 12:23:25 [alert] 32359#0: lua_code_cache is off; this will hurt performance in ./conf/ngx_private_cloud.conf:4
+2017/01/03 12:24:47 [error] 32367#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: skycloud, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8888/", host: "127.0.0.1"

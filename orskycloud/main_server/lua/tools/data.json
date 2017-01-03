@@ -1,0 +1,59 @@
+{
+"createTime": "2016-9-12 00:00:00",
+"Sensor": [
+{
+"unit": "kg",
+"name": "weight",
+"createTime": "2016-9-12 00:00:00",
+"designation": "体重"
+},
+{
+"unit": "次/分",
+"name": "heart",
+"createTime": "2016-9-12 00:00:00",
+"designation": "心率"
+},
+{
+"unit": "C",
+"name": "temperature",
+"createTime":"2016-9-12 00:00:00",
+"designation": "体温"
+},
+{
+"unit": "mmHg",
+"name": "systolic pressure",
+"createTime":"2016-9-12 00:00:00",
+"designation": "收缩压"
+},
+{
+"unit": "mmHg",
+"name": "diastolic pressure",
+"createTime":"2016-9-12 00:00:00",
+"designation": "舒张压"
+}
+],
+"deviceName": "smartdev",
+"data": [
+{
+"timestamp": "2016-10-20 14:50:30",
+"sensor": "weight",
+"value": 78
+},
+{
+"timestamp": "2016-10-20 14:50:30",
+"sensor": "heart",
+"value": 78
+},
+{
+"timestamp": "2016-10-20 14:51:09",
+"sensor": "weight",
+"value": 54
+},
+{
+"timestamp": "2016-10-20 14:51:09",
+"sensor": "heart",
+"value": 211
+}
+],
+"description": "none"
+}

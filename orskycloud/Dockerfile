@@ -48,7 +48,10 @@ RUN echo "==> Install dependencies..." \
     && apk del build-deps \
     && rm -rf /root/ngx_openresty
 
+RUN cd /home && mkdir main_server
+COPY main_server/ /home/main_server
+
 EXPOSE 80 
-CMD ["nginx", "-p", "/opt/openresty/nginx", "-g", "daemon off;"]
+CMD ["nginx", "-p", "/home/main_server"]
 
 
