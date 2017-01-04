@@ -1,0 +1,441 @@
+*2
+$6
+SELECT
+$1
+0
+*3
+$3
+set
+$6
+nextID
+$1
+0
+*3
+$3
+set
+$4
+name
+$4
+john
+*2
+$6
+SELECT
+$1
+0
+*3
+$3
+set
+$3
+aaa
+$4
+bbbb
+*2
+$6
+SELECT
+$1
+0
+*4
+$4
+hset
+$7
+uid:001
+$7
+did:001
+$927
+{
+"createTime": "2016-9-12 00:00:00",
+"Sensor": [
+{
+"unit": "kg",
+"name": "weight",
+"createTime": "2016-9-12 00:00:00",
+"designation": "体重"
+},
+{
+"unit": "次/分",
+"name": "heart",
+"createTime": "2016-9-12 00:00:00",
+"designation": "心率"
+},
+{
+"unit": "C",
+"name": "temperature",
+"createTime":"2016-9-12 00:00:00",
+"designation": "体温"
+},
+{
+"unit": "mmHg",
+"name": "systolic pressure",
+"createTime":"2016-9-12 00:00:00",
+"designation": "收缩压"
+},
+{
+"unit": "mmHg",
+"name": "diastolic pressure",
+"createTime":"2016-9-12 00:00:00",
+"designation": "舒张压"
+}
+],
+"deviceName": "smartdev",
+"data": [
+{
+"timestamp": "2016-10-20 14:50:30",
+"sensor": "weight",
+"value": 78
+},
+{
+"timestamp": "2016-10-20 14:50:30",
+"sensor": "heart",
+"value": 78
+},
+{
+"timestamp": "2016-10-20 14:51:09",
+"sensor": "weight",
+"value": 54
+},
+{
+"timestamp": "2016-10-20 14:51:09",
+"sensor": "heart",
+"value": 211
+}
+],
+"description": "none"
+}
+*2
+$6
+SELECT
+$1
+0
+*4
+$6
+HSETNX
+$7
+uid:001
+$8
+username
+$4
+john
+*4
+$6
+HSETNX
+$7
+uid:001
+$8
+password
+$6
+123456
+*4
+$6
+HSETNX
+$7
+uid:001
+$12
+nextDeviceId
+$1
+1
+*4
+$6
+HSETNX
+$7
+uid:001
+$5
+count
+$1
+1
+*4
+$6
+HSETNX
+$7
+uid:001
+$12
+sign_up_time
+$17
+2016-1-1 00:00:00
+*4
+$6
+HSETNX
+$7
+uid:001
+$15
+last_login_time
+$17
+2015-5-6 00:00:00
+*4
+$6
+HSETNX
+$7
+uid:001
+$6
+device
+$7
+001#002
+*4
+$6
+HSETNX
+$7
+uid:001
+$7
+did:002
+$143
+{
+    "deviceName":"testDevice",
+    "createTime":"2016-11-14 00:00:00",
+    "description":"none",
+    "Sensor":[
+
+    ],
+    "data":[
+
+    ]
+}
+*3
+$3
+SET
+$8
+UserList
+$4
+001#
+*3
+$3
+DEL
+$3
+aaa
+$3
+aaa
+*3
+$3
+SET
+$9
+UserCount
+$1
+1
+*3
+$3
+SET
+$10
+nextUserId
+$1
+1
+*4
+$4
+HSET
+$7
+uid:001
+$5
+count
+$1
+2
+*4
+$4
+HSET
+$7
+uid:001
+$12
+nextDeviceId
+$1
+2
+*2
+$6
+SELECT
+$1
+0
+*3
+$4
+HDEL
+$7
+uid:001
+$6
+device
+*4
+$6
+HSETNX
+$7
+uid:001
+$6
+device
+$8
+001#002#
+*4
+$7
+hincrby
+$7
+uid:001
+$12
+nextDeviceId
+$1
+1
+*1
+$5
+MULTI
+*4
+$7
+hincrby
+$7
+uid:001
+$12
+nextDeviceId
+$1
+1
+*4
+$4
+hset
+$7
+uid:001
+$36
+did:9df29ce7ca629ff1d47bca1149d9faae
+$110
+{"Sensor":[[]],"data":[[]],"deviceName":"newDevice","createTime":"2016-11-17 11:46:42","description":"device"}
+*4
+$7
+hincrby
+$7
+uid:001
+$5
+count
+$1
+1
+*1
+$4
+exec
+*4
+$4
+hset
+$7
+uid:001
+$6
+device
+$41
+001#002#9df29ce7ca629ff1d47bca1149d9faae#
+*1
+$5
+MULTI
+*4
+$7
+hincrby
+$7
+uid:001
+$12
+nextDeviceId
+$1
+1
+*4
+$4
+hset
+$7
+uid:001
+$36
+did:9df29ce7ca629ff1d47bca1149d9faae
+$110
+{"Sensor":[[]],"data":[[]],"deviceName":"newDevice","createTime":"2016-11-17 11:46:50","description":"device"}
+*4
+$7
+hincrby
+$7
+uid:001
+$5
+count
+$1
+1
+*1
+$4
+exec
+*4
+$4
+hset
+$7
+uid:001
+$6
+device
+$74
+001#002#9df29ce7ca629ff1d47bca1149d9faae#9df29ce7ca629ff1d47bca1149d9faae#
+*1
+$5
+MULTI
+*4
+$7
+hincrby
+$7
+uid:001
+$12
+nextDeviceId
+$1
+1
+*4
+$4
+hset
+$7
+uid:001
+$36
+did:9df29ce7ca629ff1d47bca1149d9faae
+$110
+{"Sensor":[[]],"data":[[]],"deviceName":"newDevice","createTime":"2016-11-17 11:48:57","description":"device"}
+*4
+$7
+hincrby
+$7
+uid:001
+$5
+count
+$1
+1
+*1
+$4
+exec
+*4
+$4
+hset
+$7
+uid:001
+$6
+device
+$107
+001#002#9df29ce7ca629ff1d47bca1149d9faae#9df29ce7ca629ff1d47bca1149d9faae#9df29ce7ca629ff1d47bca1149d9faae#
+*2
+$6
+SELECT
+$1
+0
+*4
+$4
+hset
+$7
+uid:001
+$7
+did:002
+$158
+{"Sensor":[{"unit":"kg","name":"newsensor","designation":"test"}],"data":[],"deviceName":"testDevice","createTime":"2016-11-14 00:00:00","description":"none"}
+*2
+$6
+SELECT
+$1
+0
+*3
+$3
+set
+$4
+test
+$3
+sds
+*3
+$3
+set
+$4
+test
+$3
+sds
+*3
+$3
+set
+$6
+nextID
+$1
+1
+*4
+$4
+hset
+$4
+User
+$10
+john#12345
+$3
+001
